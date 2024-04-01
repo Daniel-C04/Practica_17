@@ -1,0 +1,205 @@
+$Color-card1: hsl(263, 55%, 52%);
+$Color-card2: hsl(217, 19%, 35%);
+$Color-card3: hsl(0, 0%, 100%);
+$Color-card4: hsl(219, 29%, 14%);
+
+$Color-letra1: hsl(0, 0%, 81%);
+$Color-letra2: hsl(210, 46%, 95%);
+$Tipo-Letra: "Barlow Semi Condensed", sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $Color-letra1;
+    font-family: $Tipo-Letra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    main {
+        margin: 7.1rem 2.4rem;
+        width: 312px;
+    }
+}
+
+section {
+    border-radius: 0.8rem;
+    padding: 2.4rem 3.3rem;
+    margin-bottom: 2.4rem;
+}
+
+%Posicion {
+    div {
+        display: grid;
+        grid-template-columns: 45px 1fr;
+        grid-template-rows: 16px 1fr;
+        margin-bottom: 0.6rem;
+
+        figure {
+            grid-row: 1/span 2;
+
+            img {
+                width: 30px;
+                border-radius: 50%;
+                border: 1.2px solid $Color-letra1;
+            }
+        }
+
+        h1 {
+            color: $Color-letra2;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 0.2rem;
+        }
+
+        p {
+            color: $Color-letra1;
+        }
+    }
+
+    p:nth-child(2) {
+        font-size: 19.1px;
+        color: $Color-letra2;
+        margin-bottom: 2.5rem;
+    }
+
+    p:nth-child(3) {
+        font-size: 13px;
+        color: hsla(0, 0%, 81%, 0.5);
+        line-height: 2rem;
+        margin-bottom: 12px;
+    }
+}
+
+.section-first {
+    background-color: $Color-card1;
+    background-image: url("../Imagenes/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 2.4rem;
+    @extend %Posicion;
+
+}
+
+.section-second {
+    background-color: $Color-card2;
+    @extend %Posicion;
+
+    p:nth-child(3) {
+        color: hsla(0, 0%, 81%, 0.705);
+        font-size: 12.3px;
+    }
+}
+
+.section-third {
+    background-color: $Color-card3;
+    @extend %Posicion;
+
+    div {
+        h1 {
+            color: $Color-card2;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .name {
+            color: $Color-letra1;
+        }
+    }
+    p:nth-child(2){
+        color: $Color-card2;
+        font-weight: 600;
+        font-size: 21px;
+    }
+    p:nth-child(3){
+        color: $Color-card2;
+        font-size: 12.5px;
+    }
+}
+
+.section-four {
+    background-color: $Color-card4;
+    @extend %Posicion;
+    p:nth-child(3){
+       font-size: 12.8px;
+    }
+}
+
+
+.section-five {
+    background-color: $Color-card3;
+    box-shadow: 0 10px 15px -5px hsla(0, 1%, 70%, 0);
+    @extend %Posicion;
+    div{
+        h1{
+            color: $Color-card2;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .verified{
+            color: $Color-letra1;
+            font-size: 12px;
+        }
+    }
+    p:nth-child(2){
+        color: $Color-card2;
+        font-weight: 600;
+        font-size: 19px;
+    }
+    p:nth-child(3){
+        color: $Color-letra1;
+        font-size: 12.3px;
+    }
+}
+
+footer{
+    margin: auto;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width: 1124px){
+    body{
+        align-items: start;
+        main{
+            display:grid;
+            grid-template-columns: repeat(4,275px);
+            grid-template-rows: 325px 1fr ;
+            width: 100%;
+        }
+    }
+    section{
+        margin-left: 3rem;
+    }
+    .section-first{
+        grid-column: 1/span 2;
+        
+    }
+    .section-third{
+        
+    }
+    .section-four{
+        grid-column: 2/span 2;
+    }
+    .section-five{
+        grid-column: 4/ 5;
+        grid-row: 1/span 2;
+    }
+    
+}
