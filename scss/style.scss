@@ -176,12 +176,15 @@ footer{
 
 @media(min-width: 1124px){
     body{
-        align-items: start;
+        height: 100vh;
         main{
+            margin: auto;
             display:grid;
             grid-template-columns: repeat(4,275px);
             grid-template-rows: 325px 1fr ;
             width: 100%;
+            justify-content: center;
+            margin-top: 5rem;
         }
     }
     section{
@@ -189,9 +192,6 @@ footer{
     }
     .section-first{
         grid-column: 1/span 2;
-        
-    }
-    .section-third{
         
     }
     .section-four{
