@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0, 0%, 81%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main {
+  margin: 7.1rem 2.4rem;
+  width: 312px;
+}
+
+section {
+  border-radius: 0.8rem;
+  padding: 2.4rem 3.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.section-five div, .section-four div, .section-third div, .section-second div, .section-first div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  grid-template-rows: 16px 1fr;
+  margin-bottom: 0.6rem;
+}
+.section-five div figure, .section-four div figure, .section-third div figure, .section-second div figure, .section-first div figure {
+  grid-row: 1/span 2;
+}
+.section-five div figure img, .section-four div figure img, .section-third div figure img, .section-second div figure img, .section-first div figure img {
+  width: 30px;
+  border-radius: 50%;
+  border: 1.2px solid hsl(0, 0%, 81%);
+}
+.section-five div h1, .section-four div h1, .section-third div h1, .section-second div h1, .section-first div h1 {
+  color: hsl(210, 46%, 95%);
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+}
+.section-five div p, .section-four div p, .section-third div p, .section-second div p, .section-first div p {
+  color: hsl(0, 0%, 81%);
+}
+.section-five p:nth-child(2), .section-four p:nth-child(2), .section-third p:nth-child(2), .section-second p:nth-child(2), .section-first p:nth-child(2) {
+  font-size: 19.1px;
+  color: hsl(210, 46%, 95%);
+  margin-bottom: 2.5rem;
+}
+.section-five p:nth-child(3), .section-four p:nth-child(3), .section-third p:nth-child(3), .section-second p:nth-child(3), .section-first p:nth-child(3) {
+  font-size: 13px;
+  color: hsla(0, 0%, 81%, 0.5);
+  line-height: 2rem;
+  margin-bottom: 12px;
+}
+
+.section-first {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url("../Imagenes/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 2.4rem;
+}
+
+.section-second {
+  background-color: hsl(217, 19%, 35%);
+}
+.section-second p:nth-child(3) {
+  color: hsla(0, 0%, 81%, 0.705);
+  font-size: 12.3px;
+}
+
+.section-third {
+  background-color: hsl(0, 0%, 100%);
+}
+.section-third div h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 15px;
+  font-weight: 600;
+}
+.section-third div .name {
+  color: hsl(0, 0%, 81%);
+}
+.section-third p:nth-child(2) {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+  font-size: 21px;
+}
+.section-third p:nth-child(3) {
+  color: hsl(217, 19%, 35%);
+  font-size: 12.5px;
+}
+
+.section-four {
+  background-color: hsl(219, 29%, 14%);
+}
+.section-four p:nth-child(3) {
+  font-size: 12.8px;
+}
+
+.section-five {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 10px 15px -5px hsla(0, 1%, 70%, 0);
+}
+.section-five div h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 15px;
+  font-weight: 600;
+}
+.section-five div .verified {
+  color: hsl(0, 0%, 81%);
+  font-size: 12px;
+}
+.section-five p:nth-child(2) {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+  font-size: 19px;
+}
+.section-five p:nth-child(3) {
+  color: hsl(0, 0%, 81%);
+  font-size: 12.3px;
+}
+
+footer {
+  margin: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1124px) {
+  body {
+    align-items: start;
+  }
+  body main {
+    display: grid;
+    grid-template-columns: repeat(4, 275px);
+    grid-template-rows: 325px 1fr;
+    width: 100%;
+  }
+  section {
+    margin-left: 3rem;
+  }
+  .section-first {
+    grid-column: 1/span 2;
+  }
+  .section-four {
+    grid-column: 2/span 2;
+  }
+  .section-five {
+    grid-column: 4/5;
+    grid-row: 1/span 2;
+  }
+}/*# sourceMappingURL=style.css.map */
